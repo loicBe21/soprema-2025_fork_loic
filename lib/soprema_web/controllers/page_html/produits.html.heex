@@ -42,7 +42,6 @@
         </div> --%>
         <!-- Spinner End -->
 
-
         <!-- Navbar & Hero Start -->
         <div class="position-relative p-0">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0 sticky-top">
@@ -53,8 +52,8 @@
                 </button>
                 <div class="navbar-collapse" id="navbarCollapse text-align-center text-center">
                     <div class="navbar-nav mx-auto py-0 pe-4">
-                        <a href="index.html" class="nav-item nav-link active">Accueil</a>
-                        <a href="about.html" class="nav-item nav-link">Produits</a>
+                        <a href={~p"/"} class="nav-item nav-link active">Accueil</a>
+                        <a href={~p"/produit"} class="nav-item nav-link">Produits</a>
                         <a href="service.html" class="nav-item nav-link">Guide de solutions</a>
                         <a href="menu.html" class="nav-item nav-link">Documentation</a>
                         <div class="nav-item dropdown">
@@ -70,198 +69,200 @@
                     <a href="" class="btn btn-primary py-2 px-4 rounded-pill">Rechercher</a>
                 </div>
             </nav>
-
-            <div class="py-1 bg-dark hero-header mb-3"
-                    style="background: url('https://www.soprema.fr/media/wysiwyg/Fonctionnalisation_1__2.jpg') no-repeat center center; 
-                            background-size: cover;height: 42rem">
-                <div class="container align-items-center" style="margin-top: 17rem;">
-                    <div class="text-center text-lg-start">
-                        <h2 class="display-3 text-white animated slideInLeft">SOPREMA - Building for Life</h2>
-                        <h3 class="text-white animated slideInLeft mb-4 pb-2">Des solutions durables et innovantes pour la construction</h3>
-                    </div>
-                </div>
-            </div>
         </div>
         <!-- Navbar & Hero End -->
 
-        <section style="background-color: #eee;">
-            <div class="container py-5">
-                <div class="row">
-                <div class="col-md-12 col-lg-4 mb-4 mb-lg-0">
-                    <div class="card text-black">
-                    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-product-cards/img1.webp"
-                        class="card-img-top" alt="iPhone" />
-                    <div class="card-body">
-                        <div class="text-center mt-1">
-                        <h4 class="card-title">iPhone X</h4>
-                        <h6 class="text-primary mb-1 pb-3">Starting at $399</h6>
+        <section class="row mt-5" style="background-color: #fff;">
+                
+                <div class="col-md-3 py-1">
+                    
+                        <div class="container mt-5">
+                            <div class="container text-center">
+                                <h1 class="mb-3 animated slideInDown">Produits</h1>
+                                <nav aria-label="breadcrumb">
+                                    <ol class="breadcrumb justify-content-center text-uppercase">
+                                        <li class="breadcrumb-item"><a href="#">Acceuil</a></li>
+                                        <li class="breadcrumb-item"><a href="#">Produits</a></li>
+                                        <li class="breadcrumb-item active" aria-current="page">Menu</li>
+                                    </ol>
+                                </nav>
+                            </div>
                         </div>
-
-                        <div class="text-center">
-                        <div class="p-3 mx-n3 mb-4" style="background-color: #eff1f2;">
-                            <h5 class="mb-0">Quick Look</h5>
+                    <div class="row container">
+                        <div class="col-md-12">
+                            <div class="container text-center">
+                                <h5 class="section-title ff-secondary text-center text-primary fw-normal">categorie</h5>
+                            </div>
+                            <div class="accordion" id="faqAccordion">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">
+                                                Technologie (605)
+                                            </button>
+                                    </h2>
+                                    <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                        <div class="accordion-body">
+                                            We offer a 30-day return policy for all unused items in their original packaging.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+                                                How long does shipping take?
+                                            </button>
+                                    </h2>
+                                    <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                        <div class="accordion-body">
+                                            Shipping typically takes 3-5 business days for domestic orders and 7-14 days for
+                                            international orders.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+                                                Do you offer international shipping?
+                                            </button>
+                                    </h2>
+                                    <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                        <div class="accordion-body">
+                                            Yes, we ship to most countries worldwide. Shipping costs and delivery times may vary
+                                            depending on the destination.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
+                                                How can I track my order?
+                                            </button>
+                                    </h2>
+                                    <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                        <div class="accordion-body">
+                                            Once your order ships, you'll receive a tracking number via email. You can use this
+                                            number to track your package on our website or the carrier's site.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-
-                        <div class="d-flex flex-column mb-4">
-                            <span class="h1 mb-0">5.8″</span>
-                            <span>Super Retina HD display1</span>
-                        </div>
-
-                        <div class="d-flex flex-column mb-4">
-                            <span class="h1 mb-0">
-                            <i class="fas fa-camera-retro"></i>
-                            </span>
-                            <ul class="list-unstyled mb-0">
-                            <li aria-hidden="true">—</li>
-                            <li>Wide</li>
-                            <li>Telephoto</li>
-                            <li aria-hidden="true">—</li>
-                            </ul>
-                        </div>
-
-                        <div class="d-flex flex-column mb-4">
-                            <span class="h1 mb-0">2x</span>
-                            <span>Optical zoom range</span>
-                        </div>
-
-                        <div class="p-3 mx-n3 mb-4" style="background-color: #eff1f2;">
-                            <h5 class="mb-0">Capacity</h5>
-                        </div>
-
-                        <div class="d-flex flex-column mb-4 lead">
-                            <span class="mb-2">64GB</span>
-                            <span class="mb-2">256GB</span>
-                            <span style="color: transparent;">0</span>
-                        </div>
-                        </div>
-
-                        <div class="d-flex flex-row">
-                        <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary flex-fill me-1" data-mdb-ripple-color="dark">
-                            Learn more
-                        </button>
-                        <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-danger flex-fill ms-1">Buy now</button>
-                        </div>
-                    </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4 mb-4 mb-md-0">
-                    <div class="card text-black">
-                    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-product-cards/img2.webp"
-                        class="card-img-top" alt="iPhone" />
-                    <div class="card-body">
-                        <div class="text-center mt-1">
-                        <h4 class="card-title">iPhone 11</h4>
-                        <h6 class="text-primary mb-1 pb-3">Starting at $499</h6>
-                        </div>
+                <div class="col-md-8 py-5">
+                    <div class="row container">
+                        <div class="col-md-3 col-lg-3 mb-4 mb-lg-0 mt-2">
+                            <div class="card text-black">
+                            <img src="images/article-1.webp"
+                                class="card-img-top" alt="iPhone" />
+                            <div class="card-body">
+                                <div class="text-center mt-1">
+                                    <h5 class="card-title">PAVAFLEX CONFORT</h5>
+                                </div>
 
-                        <div class="text-center">
-                        <div class="p-3 mx-n3 mb-4" style="background-color: #eff1f2;">
-                            <h5 class="mb-0">Quick Look</h5>
+                                <div class="d-flex flex-row">
+                                    <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary flex-fill me-1" data-mdb-ripple-color="dark">
+                                        Détails
+                                    </button>
+                                <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-secondary flex-fill ms-1">comparer</button>
+                                </div>
+                            </div>
+                            </div>
                         </div>
+                        <div class="col-md-3 col-lg-3 mb-4 mb-lg-0 mt-2">
+                            <div class="card text-black">
+                            <img src="images/article-1.webp"
+                                class="card-img-top" alt="iPhone" />
+                            <div class="card-body">
+                                <div class="text-center mt-1">
+                                    <h5 class="card-title">PAVAFLEX CONFORT</h5>
+                                </div>
 
-                        <div class="d-flex flex-column mb-4">
-                            <span class="h1 mb-0">6.1″</span>
-                            <span>Liquid Retina HD display1</span>
+                                <div class="d-flex flex-row">
+                                    <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary flex-fill me-1" data-mdb-ripple-color="dark">
+                                        Détails
+                                    </button>
+                                <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-secondary flex-fill ms-1">comparer</button>
+                                </div>
+                            </div>
+                            </div>
                         </div>
+                        <div class="col-md-3 col-lg-3 mb-4 mb-lg-0 mt-2">
+                            <div class="card text-black">
+                            <img src="images/article-1.webp"
+                                class="card-img-top" alt="iPhone" />
+                            <div class="card-body">
+                                <div class="text-center mt-1">
+                                    <h5 class="card-title">PAVAFLEX CONFORT</h5>
+                                </div>
 
-                        <div class="d-flex flex-column mb-4">
-                            <span class="h1 mb-0">
-                            <i class="fas fa-camera-retro"></i>
-                            </span>
-                            <ul class="list-unstyled mb-0">
-                            <li aria-hidden="true">Ultra Wide</li>
-                            <li>Wide</li>
-                            <li aria-hidden="true">—</li>
-                            <li aria-hidden="true">—</li>
-                            </ul>
+                                <div class="d-flex flex-row">
+                                    <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary flex-fill me-1" data-mdb-ripple-color="dark">
+                                        Détails
+                                    </button>
+                                <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-secondary flex-fill ms-1">comparer</button>
+                                </div>
+                            </div>
+                            </div>
                         </div>
+                        <div class="col-md-3 col-lg-3 mb-4 mb-lg-0 mt-2">
+                            <div class="card text-black">
+                            <img src="images/article-1.webp"
+                                class="card-img-top" alt="iPhone" />
+                            <div class="card-body">
+                                <div class="text-center mt-1">
+                                    <h5 class="card-title">PAVAFLEX CONFORT</h5>
+                                </div>
 
-                        <div class="d-flex flex-column mb-4">
-                            <span class="h1 mb-0">2x</span>
-                            <span>Optical zoom range</span>
+                                <div class="d-flex flex-row">
+                                    <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary flex-fill me-1" data-mdb-ripple-color="dark">
+                                        Détails
+                                    </button>
+                                <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-secondary flex-fill ms-1">comparer</button>
+                                </div>
+                            </div>
+                            </div>
                         </div>
+                        <div class="col-md-3 col-lg-3 mb-4 mb-lg-0 mt-2">
+                            <div class="card text-black">
+                            <img src="images/article-1.webp"
+                                class="card-img-top" alt="iPhone" />
+                            <div class="card-body">
+                                <div class="text-center mt-1">
+                                    <h5 class="card-title">PAVAFLEX CONFORT</h5>
+                                </div>
 
-                        <div class="p-3 mx-n3 mb-4" style="background-color: #eff1f2;">
-                            <h5 class="mb-0">Capacity</h5>
+                                <div class="d-flex flex-row">
+                                    <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary flex-fill me-1" data-mdb-ripple-color="dark">
+                                        Détails
+                                    </button>
+                                <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-secondary flex-fill ms-1">comparer</button>
+                                </div>
+                            </div>
+                            </div>
                         </div>
+                        <div class="col-md-3 col-lg-3 mb-4 mb-lg-0 mt-2">
+                            <div class="card text-black">
+                            <img src="images/article-1.webp"
+                                class="card-img-top" alt="iPhone" />
+                            <div class="card-body">
+                                <div class="text-center mt-1">
+                                    <h5 class="card-title">PAVAFLEX CONFORT</h5>
+                                </div>
 
-                        <div class="d-flex flex-column mb-4 lead">
-                            <span class="mb-2">64GB</span>
-                            <span class="mb-2">128GB</span>
-                            <span>256GB</span>
+                                <div class="d-flex flex-row">
+                                    <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary flex-fill me-1" data-mdb-ripple-color="dark">
+                                        Détails
+                                    </button>
+                                <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-secondary flex-fill ms-1">comparer</button>
+                                </div>
+                            </div>
+                            </div>
                         </div>
-                        </div>
-
-                        <div class="d-flex flex-row">
-                        <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary flex-fill me-1" data-mdb-ripple-color="dark">
-                            Learn more
-                        </button>
-                        <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-danger flex-fill ms-1">Buy now</button>
-                        </div>
-                    </div>
+                        
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4 mb-4 mb-md-0">
-                    <div class="card text-black">
-                    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-product-cards/img3.webp"
-                        class="card-img-top" alt="iPhone" />
-                    <div class="card-body">
-                        <div class="text-center mt-1">
-                        <h4 class="card-title">iPhone 11 Pro</h4>
-                        <h6 class="text-primary mb-1 pb-3">Starting at $599</h6>
-                        </div>
-
-                        <div class="text-center">
-                        <div class="p-3 mx-n3 mb-4" style="background-color: #eff1f2;">
-                            <h5 class="mb-0">Quick Look</h5>
-                        </div>
-
-                        <div class="d-flex flex-column mb-4">
-                            <span class="h1 mb-0">5.8″</span>
-                            <span>Super Retina HD display1</span>
-                        </div>
-
-                        <div class="d-flex flex-column mb-4">
-                            <span class="h1 mb-0">
-                            <i class="fas fa-camera-retro"></i>
-                            </span>
-                            <ul class="list-unstyled mb-0">
-                            <li aria-hidden="true">Ultra Wide</li>
-                            <li>Wide</li>
-                            <li>Telephoto</li>
-                            <li aria-hidden="true">—</li>
-                            </ul>
-                        </div>
-
-                        <div class="d-flex flex-column mb-4">
-                            <span class="h1 mb-0">4x</span>
-                            <span>Optical zoom range</span>
-                        </div>
-
-                        <div class="p-3 mx-n3 mb-4" style="background-color: #eff1f2;">
-                            <h5 class="mb-0">Capacity</h5>
-                        </div>
-
-                        <div class="d-flex flex-column mb-4 lead">
-                            <span class="mb-2">64GB</span>
-                            <span class="mb-2">256GB</span>
-                            <span>512GB</span>
-                        </div>
-                        </div>
-
-                        <div class="d-flex flex-row">
-                        <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary flex-fill me-1" data-mdb-ripple-color="dark">
-                            Learn more
-                        </button>
-                        <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-danger flex-fill ms-1">Buy now</button>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-                </div>
-            </div>
-            </section>
-        
+        </section>        
 
         <!-- Footer Start -->
         <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
