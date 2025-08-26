@@ -2,6 +2,7 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 @import "style.css";
+@import "accordeon.css";
 @import "bootstrap.min.css";
 @import "animate.css";
 @import "animate.min.css";

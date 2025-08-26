@@ -10,6 +10,15 @@ defmodule SopremaWeb.Router do
     plug :put_secure_browser_headers
   end
 
+  pipeline :browser2 do
+    plug :accepts, ["html"]
+    plug :fetch_session
+    plug :fetch_live_flash
+    plug :put_root_layout, html: {SopremaWeb.Layouts, :second}
+    plug :protect_from_forgery
+    plug :put_secure_browser_headers
+  end
+
   pipeline :api do
     plug :accepts, ["json"]
   end
@@ -18,6 +27,12 @@ defmodule SopremaWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :home
+  end
+
+  scope "/", SopremaWeb do
+    pipe_through :browser2
+
+    live "/details", DetailsLive
     get "/produit", PageController, :produit
   end
 
