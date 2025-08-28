@@ -203,13 +203,17 @@ defmodule SopremaWeb.DetailsLive do
     """
   end
 
-  defp handle_event("to_doc", socket) do
-  IO.inspect("Clic reçu !", label: "DEBUG")  # Pour vérifier dans la console
-  {:noreply, assign(socket, :active_content, 1)}
+  """
+  def handle_event("to_doc", _params , socket) do
+    second_card_html = function_desc()
+    {:noreply, assign(socket, content: raw(second_card_html))}ntent, 1)}
   end
+  """
 
-  defp handle_event("to_doc", _params, socket) do
+  def handle_event("to_doc", _params, socket) do
   second_card_html = function_desc()
     {:noreply, assign(socket, content: raw(second_card_html))}
   end
+
+
 end
