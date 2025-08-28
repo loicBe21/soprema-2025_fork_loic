@@ -21,10 +21,10 @@ import "phoenix_html"
 import {Socket} from "phoenix"
 import {LiveSocket} from "phoenix_live_view"
 import topbar from "../vendor/topbar"
-import "../js/main"
-import "../js/wow"
-import "../js/owl.carousel"
-import "../js/tempusdominus-bootstrap-4"
+// import "../js/main"
+// import "../js/wow"
+// import "../js/owl.carousel"
+// import "../js/tempusdominus-bootstrap-4"
 
 let csrfToken = document.querySelector("meta[name='csrf-token']").getAttribute("content")
 let liveSocket = new LiveSocket("/live", Socket, {
