@@ -94,118 +94,22 @@
             </div>
             <div class="col-md-8 py-5">
                 <div class="row container">
+                <%= for p <- @produit_var do %>
                     <div class="col-md-3 col-lg-3 mb-4 mb-lg-0 mt-2">
                     <a href={~p"/details"}>
                         <div class="card text-black">
-                            <img src="images/p-1.webp"
-                                class="card-img-top" alt="iPhone" />
+                            <img src={"/" <> p.photo}
+                                class="card-img-top" alt="article" />
                             <div class="card-body">
                                 <div class="text-center mt-1">
-                                    <h6 class="card-title">Elastovap</h6>
+                                    <h6 class="card-title"><%= p.nom %></h6>
                                 </div>
 
                             </div>
                         </div>
                     </a>
                     </div>
-                    <div class="col-md-3 col-lg-3 mb-4 mb-lg-0 mt-2">
-                    <a href={~p"/details"}>
-                        <div class="card text-black">
-                            <img src="images/p-2.webp"
-                                class="card-img-top" alt="iPhone" />
-                            <div class="card-body">
-                                <div class="text-center mt-1">
-                                    <h6 class="card-title">Elastophene flam 25</h6>
-                                </div>
-
-                            </div>
-                        </div>
-                    </a>
-                    </div>
-                    <div class="col-md-3 col-lg-3 mb-4 mb-lg-0 mt-2">
-                    <a href={~p"/details"}>
-                        <div class="card text-black">
-                            <img src="images/p-3.webp"
-                                class="card-img-top" alt="iPhone" />
-                            <div class="card-body">
-                                <div class="text-center mt-1">
-                                    <h6 class="card-title">ELASTOPHENE FLAM 180/25</h6>
-                                </div>
-
-                            </div>
-                        </div>
-                    </a>
-                    </div>
-                    <div class="col-md-3 col-lg-3 mb-4 mb-lg-0 mt-2">
-                    <a href="#">
-                        <div class="card text-black">
-                            <img src="images/p-4.webp"
-                                class="card-img-top" alt="iPhone" />
-                            <div class="card-body">
-                                <div class="text-center mt-1">
-                                    <h6 class="card-title">ELASTOPHENE FLAM 25 AR</h6>
-                                </div>
-
-                            </div>
-                        </div>
-                    </a>
-                    </div>
-                    <div class="col-md-3 col-lg-3 mb-4 mb-lg-0 mt-2">
-                    <a href={~p"/details"}>
-                        <div class="card text-black">
-                        <img src="images/p-5.webp"
-                            class="card-img-top" alt="iPhone" />
-                        <div class="card-body">
-                            <div class="text-center mt-1">
-                                <h6 class="card-title">SOPRALENE FLAM 180</h6>
-                            </div>
-
-                        </div>
-                        </div>
-                    </a>
-                    </div>
-                    <div class="col-md-3 col-lg-3 mb-4 mb-lg-0 mt-2">
-                    <a href={~p"/details"}>
-                        <div class="card text-black">
-                        <img src="images/p-6.webp"
-                            class="card-img-top" alt="iPhone" />
-                        <div class="card-body">
-                            <div class="text-center mt-1">
-                                <h6 class="card-title">SOPRALENE FLAM 180 AR </h6>
-                            </div>
-
-                        </div>
-                        </div>
-                    </a>
-                    </div>
-                    <div class="col-md-3 col-lg-3 mb-4 mb-lg-0 mt-2">
-                    <a href={~p"/details"}>
-                        <div class="card text-black">
-                        <img src="images/p-7.webp"
-                            class="card-img-top" alt="iPhone" />
-                        <div class="card-body">
-                            <div class="text-center mt-1">
-                                <h6 class="card-title">EQUERRE DE RENFORT SOPRALENE </h6>
-                            </div>
-
-                        </div>
-                        </div>
-                    </a>
-                    </div>
-                    <div class="col-md-3 col-lg-3 mb-4 mb-lg-0 mt-2">
-                    <a href={~p"/details"}>
-                        <div class="card text-black">
-                        <img src="images/p-8.webp"
-                            class="card-img-top" alt="iPhone" />
-                        <div class="card-body">
-                            <div class="text-center mt-1">
-                                <h6 class="card-title">SOPRALAST TV 50 ALU FLAM</h6>
-                            </div>
-
-                        </div>
-                        </div>
-                    </a>
-                    </div>
+                <% end %>
                     
                 </div>
             </div>

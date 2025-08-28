@@ -195,7 +195,7 @@ defmodule SopremaWeb.DetailsLive do
     """
   end
 
-  defp function_desc() do
+  def function_desc() do
     """
       <div class="row">
         <p>description</p>
@@ -203,14 +203,12 @@ defmodule SopremaWeb.DetailsLive do
     """
   end
 
-  """
-  def handle_event("to_doc", _params , socket) do
-    second_card_html = function_desc()
-    {:noreply, assign(socket, content: raw(second_card_html))}ntent, 1)}
+  def handle_event("to_doc", socket) do
+  second_card_html = function_doc()
+    {:noreply, assign(socket, content: raw(second_card_html))}
   end
-  """
 
-  def handle_event("to_doc", _params, socket) do
+  def handle_event("to_desc", _params, socket) do
   second_card_html = function_desc()
     {:noreply, assign(socket, content: raw(second_card_html))}
   end
