@@ -3,9 +3,10 @@ import Config
 # Configure your database
 config :soprema, Soprema.Repo,
   username: "postgres",
-  password: "pgadmin",
+  password: "MGbi@262**",
   hostname: "localhost",
   database: "soprema_dev",
+  port: 5433,
   stacktrace: true,
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
@@ -19,7 +20,7 @@ config :soprema, Soprema.Repo,
 config :soprema, SopremaWeb.Endpoint,
   # Binding to loopback ipv4 address prevents access from other machines.
   # Change to `ip: {0, 0, 0, 0}` to allow access from other machines.
-  http: [ip: {127, 0, 0, 1}, port: 4002],
+  http: [ip: {0, 0, 0, 0}, port: 4002],
   check_origin: false,
   code_reloader: true,
   debug_errors: true,
