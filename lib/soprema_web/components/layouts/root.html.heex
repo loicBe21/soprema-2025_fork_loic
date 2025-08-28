@@ -52,8 +52,8 @@
                   <a href="#" class="nav-item nav-link">Contact</a>
                 </div>
                 <!-- Champ de recherche masqué par défaut -->
-                <form id="searchForm" class="d-none me-3" role="search">
-                  <input class="form-control" type="search" placeholder="Rechercher..." aria-label="Search">
+               <form id="searchForm" class="d-none me-3" role="search">
+                  <input class="form-control" type="search" placeholder="Rechercher..." aria-label="Search" method="get" action="/recherche">
                 </form>
 
                 <!-- Bouton recherche -->
@@ -122,55 +122,6 @@
             </div>
             !-->
 
-
-            <div class="row justify-content-center">
-                <div class="col-12 col-lg-8">
-                    <div id="headerCarousel" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#headerCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#headerCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#headerCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                    </div>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active" style="background: url('https://www.soprema.fr/media/wysiwyg/Fonctionnalisation_1__2.jpg') no-repeat center center; background-size: cover; height: 30rem;">
-                        <div class="container align-items-center" style="margin-top: 10rem;">
-                            <div class="text-center text-lg-start">
-                            <h2 class="display-3 text-white animated slideInLeft"></h2>
-                            <h3 class="text-white animated slideInLeft mb-4 pb-2"></h3>
-                            </div>
-                        </div>
-                        </div>
-                        <div class="carousel-item" style="background: url('https://www.soprema.fr/media/wysiwyg/Fonctionnalisation_1__2.jpg') no-repeat center center; background-size: cover; height: 30rem;">
-                        <div class="container align-items-center" style="margin-top: 10rem;">
-                            <div class="text-center text-lg-start">
-                            <h2 class="display-3 text-white animated slideInLeft"></h2>
-                            <h3 class="text-white animated slideInLeft mb-4 pb-2"></h3>
-                            </div>
-                        </div>
-                        </div>
-                        <div class="carousel-item" style="background: url('https://www.soprema.fr/media/wysiwyg/R_novation_4.png') no-repeat center center; background-size: cover; height: 30rem;">
-                        <div class="container align-items-center" style="margin-top: 10rem;">
-                            <div class="text-center text-lg-start">
-                            <h2 class="display-3 text-white animated slideInLeft"></h2>
-                            <h3 class="text-white animated slideInLeft mb-4 pb-2"></h3>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#headerCarousel" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Précédent</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#headerCarousel" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Suivant</span>
-                    </button>
-                    </div>
-                </div>
-            </div>
-
-
-
         </div>
         <!-- Navbar & Hero End -->
     {@inner_content}
@@ -207,17 +158,22 @@
         <!-- Footer End -->
 
         <script>
-          document.addEventListener("DOMContentLoaded", function () {
-            const searchToggle = document.getElementById("searchToggle");
-            const searchForm = document.getElementById("searchForm");
+         document.addEventListener("DOMContentLoaded", function() {
+          const toggleButton = document.getElementById("searchToggle");
+          const searchForm = document.getElementById("searchForm");
+          const searchInput = document.getElementById("searchInput");
 
-            searchToggle.addEventListener("click", function () {
-              searchForm.classList.toggle("d-none"); // affiche/masque le champ
-              if (!searchForm.classList.contains("d-none")) {
-                searchForm.querySelector("input").focus(); // focus auto
-              }
-            });
+          toggleButton.addEventListener("click", () => {
+            // Si le formulaire est masqué, on l'affiche et on focus
+            if (searchForm.classList.contains("d-none")) {
+              searchForm.classList.remove("d-none");
+              searchInput.focus();
+            } else {
+              // Si le formulaire est visible, on l'envoie
+              searchForm.submit();
+            }
           });
+        });
         </script>
 
         <!-- Back to Top -->
